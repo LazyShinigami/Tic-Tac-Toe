@@ -1,12 +1,16 @@
 body {
     padding: 1rem;
-    background-image: radial-gradient(rgba(0, 0, 0, 0.1), rgba(63, 63, 63, 0.8)),  url(images/Background.jpg);
-    background-size:cover;
+    background-image: url(images/Background.jpg);
+    background-size:auto;
     background-repeat: no-repeat;
     color: white;
     text-shadow: 1px 1px 2px black;
 }
-
+#welcomeMessage {
+    border-bottom: 2px solid black;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+}
 .cell {
     height: 10rem;
     width: 10rem;
@@ -46,19 +50,10 @@ body {
     width: 53rem;
     padding: 5px;
     margin-left: 20rem;
+    position: relative;
+    bottom: 6rem;
 }
 
-.innerRule {
-    border: 3px solid white;
-    width: 30rem;
-    padding: 0.8rem;
-    margin-top: 5px;
-    font-size: 125%;
-}
-
-li {
-    margin: 10px 0px 10px 0px;
-}
 
 .playerOne, .playerTwo {
     display: flex;
@@ -77,17 +72,17 @@ li {
 }
 
 .result {
+    background: radial-gradient(rgba(0, 0, 0, 0.1), rgba(63, 63, 63, 0.2));
     font-size: 150%;
+    padding: 3rem;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
     font-weight: bold;
-    margin-bottom: 3rem;
     margin-top: 3rem;
     position: relative;
-    bottom: 11rem;
+    bottom: 5rem;
 }
-hr {
-    position: relative;
-    bottom: 11rem;
-}
+
 .tile {
     height: 10rem;
     width: 10rem;
@@ -97,18 +92,27 @@ hr {
     margin-left: 15px;
 }
 
+input {
+    width: 8.1rem;
+    font-size: 10%;
+}
+
 .leaderBoard {
-    border: 4px solid white;
+    border: 2px solid black;
     font-size: 125%;
     width: 12rem;
     padding: 5px;
-    position: relative;
-    bottom: 30.5rem;
-    left: 55rem;
-    box-shadow: 7px 7px 14px black;
+    box-shadow: 7px 7px 25px black;
     border-radius: 10px;
     text-shadow: 2px 2px 7px black;
+    position: relative;
+    left: 29rem;
 }
+.playerInfo {
+    position: relative;
+    bottom: 10rem;
+}
+
 #firstPlayer, #secondPlayer {
     border-top: 2px solid white;
     padding: 15px;
@@ -122,4 +126,49 @@ hr {
 }
 #scoreOne, #scoreTwo {
     margin-top: 2px;
+}
+
+
+
+.dropbtn {
+    background: radial-gradient(rgba(0, 0, 0, 0.1), rgba(63, 63, 63, 0.2));
+    color: white;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-size: 125%;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1.8px solid black;
+    box-shadow: 2px 2px 6px black;
+    border-radius: 10px;
+    width: 3rem;
+    margin-bottom: 1rem;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    background: radial-gradient(rgba(0, 0, 0, 0.1), rgba(63, 63, 63, 0.2));
+    font-weight: bold;
+    box-shadow: 2px 2px 4px black;
+    display: none;
+    position: static;
+    min-width: 32rem;
+    margin-top: 15px;
+    border-left: 3px solid black;
+    margin-bottom: 5rem;
+
+}
+
+.dropdown-content li {
+    color: white;
+    padding: 0.5rem;
+    display: block;
+    font-size: 125%;
+}
+
+.show {
+    display: block;
 }

@@ -152,12 +152,14 @@ function invisible() {
 const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
 
 if (isMobile) {
-  let css = document.getElementById("css")
-  css.href = "TTT_Mobile.css"
+    let css = document.getElementById("css")
+    css.href = "TTT_Mobile.css"
+    console.log("molibe");
 }
 else {
-    console.log("Not Mobile");
-    console.log("Height:", window.innerHeight, "Width:",window.innerWidth);
+    let css = document.getElementById("css")
+    css.href = "TTT.css"
+    console.log("not mobile");
 }
 
 
