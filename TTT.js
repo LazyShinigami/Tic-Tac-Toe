@@ -149,7 +149,32 @@ function invisible() {
 }
 
 
+const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+
+if (isMobile) {
+  let css = document.getElementById("css")
+  css.href = "TTT_Mobile.css"
+}
+else {
+    console.log("Not Mobile");
+    console.log("Height:", window.innerHeight, "Width:",window.innerWidth);
+}
 
 
-
-
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
