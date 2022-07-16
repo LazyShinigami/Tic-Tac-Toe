@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="TTT.css">
+    <title>Tic-Tac-Toe</title>
+</head>
+<body>
+    <center><h1>Welcome, to the Memory Game!</h1></center>
+    <div class="rules">
+        <h2>Rules:</h2>
+        <div class="innerRule">
+            <li>Enter names of both players. Hit "save" to begin game.</li>
+            <li>Await your turn.</li>
+            <li>Choose a tile to claim it.</li>
+            <li>Claim 3 tiles in a line to win.</li>
+        </div>
+    </div><br>
+    <div class="playerInfo">
+        <div class="playerOne">
+            Player One: 
+            <img src="images/Cross.jpg" alt="Cross" height="50px" width="50px" style="border:1px solid black; border-radius: 50%; margin-left: 20px; padding: 3px;">
+            <input id="playerOneName" type="text" placeholder="Player One Name" maxlength="15" style="margin-left: 20px; font-size: 85%; box-shadow: 5px 5px 10px black; border-radius: 8px; padding-left: 15px;">
+            <span class="playerName" id="P1"></span>
+        </div>
+        <div class="playerTwo">
+            Player Two: 
+            <img src="images/Circle.webp" alt="Circle" height="50px" width="50px" style="border:1px solid black; border-radius: 50%; margin-left: 20px; padding: 3px;">
+            <input id="playerTwoName" type="text" placeholder="Player Two Name" maxlength="15" style="margin-left: 20px; font-size: 85%; box-shadow: 5px 5px 10px black; border-radius: 8px; padding-left: 15px;">
+            <span class="playerName" id="P2"></span>
+        </div>
+        <button id="save">Save</button>
+    </div><br>
+
+    <div class="main">
+        <div class="gridBox">
+            <div class="cell" id="0"></div>
+            <div class="cell" id="1"></div>
+            <div class="cell" id="2"></div>
+            <div class="cell" id="3"></div>
+            <div class="cell" id="4"></div>
+            <div class="cell" id="5"></div>
+            <div class="cell" id="6"></div>
+            <div class="cell" id="7"></div>
+            <div class="cell" id="8"></div>
+        </div>
+        <!-- <div class="grid"><img id="gridLines" src="images/Grid.jpg" alt=""></div> -->
+        <div id="playerTurn"></div>
+    </div>
+    <div class="leaderBoard"><b><center>Score Board</center></b>
+        <div id="firstPlayer"> <span id="a">Player 1</span><span id="scoreOne">0</span></div>
+        <div id="secondPlayer"> <span id="b">Player 2</span> <span id="scoreTwo">0</span></div>
+    </div>
+    <hr>
+    <div class="result">Result: &nbsp;<span id="result"></span></div>
+    <hr>
+    <script src="TTT.js"></script>
+</body>
+</html>
