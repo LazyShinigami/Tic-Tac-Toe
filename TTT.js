@@ -13,6 +13,12 @@ function acceptValue() {
     // console.log("1st player: ", playerOneName);
     // console.log("2nd player: ", playerTwoName);
     saveButton.remove()
+    if (playerOneName.length === 0) {
+        playerOneName = "Player 1"
+    }
+    if (playerTwoName.length === 0) {
+        playerTwoName = "Player 2"
+    }
     let inputs = Array.from(document.getElementsByTagName("input"))
     inputs[0].remove()
     inputs[1].remove()
